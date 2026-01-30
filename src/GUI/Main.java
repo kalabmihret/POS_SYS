@@ -41,3 +41,34 @@ public class Main extends Application {
         primaryStage.setTitle("🛒 POS System");
         primaryStage.show();
     }
+
+
+    public void showLogin() {
+        Scene scene = loginView.getScene();
+        primaryStage.setScene(scene);
+        primaryStage.setWidth(800);
+        primaryStage.setHeight(600);
+        primaryStage.centerOnScreen();
+    }
+
+    public void showAdminDashboard() {
+        Scene scene = adminDashboard.getScene();
+        primaryStage.setScene(scene);
+        primaryStage.setWidth(1000);
+        primaryStage.setHeight(700);
+        primaryStage.centerOnScreen();
+    }
+
+    public void showCashierDashboard() {
+        Scene scene = cashierDashboard.getScene();
+        primaryStage.setScene(scene);
+        primaryStage.setWidth(1000);
+        primaryStage.setHeight(700);
+        primaryStage.centerOnScreen();
+    }
+
+    public static void main(String[] args)
+    {
+        launch(args);
+    }
+}
