@@ -20,3 +20,24 @@ public class Main extends Application {
     private AuthServiceInterface authService;
     private ProductServiceInterface productService;
     private SaleServiceInterface saleService;
+
+    @Override
+    public void start(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+
+        // Initialize services (shared)
+        authService = new AuthService();
+        productService = new ProductService();
+        saleService = new SaleService();
+
+        // Initialize views with shared services
+        loginView = new LoginView(this, authService);
+        adminDashboard = new AdminDashboard(this, authService, productService, saleService);
+        cashierDashboard = new CashierDashboard(this, productService, saleService);
+
+        // Show login screen first
+        showLogin();
+
+        primaryStage.setTitle("🛒 POS System");
+        primaryStage.show();
+    }
