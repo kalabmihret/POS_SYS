@@ -11,7 +11,7 @@ public class AuthService implements AuthServiceInterface {
 
     private List<User> users;
     private User currentUser;
-    private static final String USERS_DIR = System.getProperty("user.home") + "/OneDrive/Desktop/possystem 1/Data/";
+    private static final String USERS_DIR = System.getProperty("user.home") + "/OneDrive/Desktop/Data/";
     private static final String USERS_FILE = USERS_DIR + "/users.csv";
 
 

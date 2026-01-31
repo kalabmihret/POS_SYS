@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FileUtil {
 
-    private static final File BASE_DIR = new File(System.getProperty("user.home") + "/OneDrive/Desktop/possystem 1/");
+    private static final File BASE_DIR = new File(System.getProperty("user.home") + "/OneDrive/Desktop/");
 
     static {
         if (!BASE_DIR.exists()) {
